@@ -1,12 +1,10 @@
 #include "ets_sys.h"
 #include "osapi.h"
-#include "gpio.h"
 #include "os_type.h"
 #include "user_config.h"
 #include "user_interface.h"
 #include "kame.h"
 #include "stdout.h"
-#include "gpio.h"
 #include "espmissingincludes.h"
 #include "espconn.h"
 
