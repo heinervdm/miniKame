@@ -9,9 +9,115 @@
 #include "espconn.h"
 
 static os_timer_t fail_timer;
+static os_timer_t run_timer;
+
+// TCP server code from http://www.esp8266.com/viewtopic.php?f=9&t=523
+LOCAL uint16_t server_timeover = 60*60*12; // yes. 12h timeout. so what? :)
+LOCAL struct espconn masterconn;
+LOCAL uint8_t running = 0;
+Local char lastCmd;
+
+const char *msg_welcome = "Welcome to ESP8266 miniKame!\n\n";
+
+LOCAL void ICACHE_FLASH_ATTR server_tcp_disconcb(void *arg) {
+	struct espconn *pespconn = (struct espconn *) arg;
+
+	os_printf("tcp connection disconnected\n");
+}
+
+LOCAL void ICACHE_FLASH_ATTR server_parse_data(char data) {
+	switch (data) {
+		case 1:
+			kame_walk(1,550);
+			running = 1;
+			break;
+
+		case 2:
+			break;
+
+		case 3:
+			kame_turnL(1,550);
+			running = 1;
+			break;
+
+		case 4:
+			kame_turnR(1,550);
+			running = 1;
+			break;
+
+		case 5:
+			//STOP
+			running = 0;
+			break;
+
+		case 6: //heart
+			kame_pushUp(2,1400);
+			break;
+
+		case 7: //fire
+			kame_upDown(4,250);
+			break;
+
+		case 8: //skull
+			kame_jump();
+			break;
+
+		case 9: //cross
+			kame_hello();
+			break;
+
+		case 10: //punch
+			//robot.moonwalkL(4,2000);
+			kame_frontBack(4,200);
+			break;
+
+		case 11: //mask
+			kame_dance(2,1000);
+			break;
+
+		default:
+			kame_home();
+			break;
+	}
+	lastCmd = data;
+}
+
+LOCAL void ICACHE_FLASH_ATTR server_tcp_recvcb(void *arg, char *pusrdata, unsigned short length) {
+	struct espconn *pespconn = (struct espconn *) arg;
+
+	os_printf(">'%s' ", pusrdata);
+
+	for(int i = 0; i < length; i++) {
+		os_printf("0x%02X ", pusrdata[i]);
+		server_parse_data(pusrdata[i]);
+	}
+	os_printf("\n");
+	// espconn_sent(pespconn, pusrdata, length); //echo
+}
+
+
+LOCAL void ICACHE_FLASH_ATTR tcpserver_connectcb(void *arg) {
+	struct espconn *pespconn = (struct espconn *)arg;
+
+	os_printf("tcp connection established\n");
+
+	espconn_regist_recvcb(pespconn, server_tcp_recvcb);
+	// espconn_regist_reconcb(pespconn, tcpserver_recon_cb);
+	espconn_regist_disconcb(pespconn, server_tcp_disconcb);
+	// espconn_regist_sentcb(pespconn, tcpclient_sent_cb);
+	
+	espconn_sent(pespconn, (uint8*)msg_welcome, os_strlen(msg_welcome));
+}
 
 void ICACHE_FLASH_ATTR server_start() {
 	kame_init();
+	masterconn.type = ESPCONN_TCP;
+	masterconn.state = ESPCONN_NONE;
+	masterconn.proto.tcp = (esp_tcp *)os_zalloc(sizeof(esp_tcp));
+	masterconn.proto.tcp->local_port = 23;
+	espconn_regist_connectcb(&masterconn, tcpserver_connectcb);
+	espconn_accept(&masterconn);
+	espconn_regist_time(&masterconn, server_timeover, 0);
 }
 
 static void ICACHE_FLASH_ATTR fail_timerfunc(void *arg) {
