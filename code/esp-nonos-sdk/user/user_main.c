@@ -7,15 +7,18 @@
 #include "stdout.h"
 #include "espmissingincludes.h"
 #include "espconn.h"
+#include "mem.h"
 
 static os_timer_t fail_timer;
-static os_timer_t run_timer;
+#define user_procTaskPrio        0
+#define user_procTaskQueueLen    10
+os_event_t    user_procTaskQueue[user_procTaskQueueLen];
 
 // TCP server code from http://www.esp8266.com/viewtopic.php?f=9&t=523
 LOCAL uint16_t server_timeover = 60*60*12; // yes. 12h timeout. so what? :)
 LOCAL struct espconn masterconn;
 LOCAL uint8_t running = 0;
-Local char lastCmd;
+LOCAL char lastCmd;
 
 const char *msg_welcome = "Welcome to ESP8266 miniKame!\n\n";
 
@@ -27,52 +30,62 @@ LOCAL void ICACHE_FLASH_ATTR server_tcp_disconcb(void *arg) {
 
 LOCAL void ICACHE_FLASH_ATTR server_parse_data(char data) {
 	switch (data) {
-		case 1:
+		case 'W':
+		case 'w':
 			kame_walk(1,550);
 			running = 1;
 			break;
 
-		case 2:
-			break;
-
-		case 3:
+		case 'L':
+		case 'l':
 			kame_turnL(1,550);
 			running = 1;
 			break;
 
-		case 4:
+		case 'R':
+		case 'r':
 			kame_turnR(1,550);
 			running = 1;
 			break;
 
-		case 5:
+		case 'S':
+		case 's':
 			//STOP
 			running = 0;
 			break;
 
-		case 6: //heart
+		case 'P':
+		case 'p':
 			kame_pushUp(2,1400);
 			break;
 
-		case 7: //fire
+		case 'U':
+		case 'u':
 			kame_upDown(4,250);
 			break;
 
-		case 8: //skull
+		case 'J':
+		case 'j':
 			kame_jump();
 			break;
 
-		case 9: //cross
+		case 'H':
+		case 'h':
 			kame_hello();
 			break;
 
-		case 10: //punch
-			//robot.moonwalkL(4,2000);
-			kame_frontBack(4,200);
+		case 'M':
+		case 'm':
+			kame_moonwalkL(4,2000);
 			break;
 
-		case 11: //mask
+		case 'D':
+		case 'd':
 			kame_dance(2,1000);
+			break;
+
+		case '\n':
+		case '\r':
 			break;
 
 		default:
@@ -82,6 +95,15 @@ LOCAL void ICACHE_FLASH_ATTR server_parse_data(char data) {
 	lastCmd = data;
 }
 
+static void ICACHE_FLASH_ATTR loop(os_event_t *events) {
+	server_parse_data(events->par);
+
+	if (running) {
+		os_delay_us(100);
+		system_os_post(user_procTaskPrio, 0, events->par);
+	}
+}
+
 LOCAL void ICACHE_FLASH_ATTR server_tcp_recvcb(void *arg, char *pusrdata, unsigned short length) {
 	struct espconn *pespconn = (struct espconn *) arg;
 
@@ -89,7 +111,7 @@ LOCAL void ICACHE_FLASH_ATTR server_tcp_recvcb(void *arg, char *pusrdata, unsign
 
 	for(int i = 0; i < length; i++) {
 		os_printf("0x%02X ", pusrdata[i]);
-		server_parse_data(pusrdata[i]);
+		system_os_post(user_procTaskPrio, 0, pusrdata[i]);
 	}
 	os_printf("\n");
 	// espconn_sent(pespconn, pusrdata, length); //echo
@@ -185,4 +207,6 @@ void ICACHE_FLASH_ATTR user_init() {
 	system_timer_reinit();
 	stdoutInit();
 	system_init_done_cb(init_done);
+
+	system_os_task(loop, user_procTaskPrio, user_procTaskQueue, user_procTaskQueueLen);
 }
