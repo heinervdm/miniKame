@@ -17,7 +17,7 @@ os_event_t    user_procTaskQueue[user_procTaskQueueLen];
 // TCP server code from http://www.esp8266.com/viewtopic.php?f=9&t=523
 LOCAL uint16_t server_timeover = 60*60*12; // yes. 12h timeout. so what? :)
 LOCAL struct espconn masterconn;
-LOCAL uint8_t running = 0;
+LOCAL volatile uint8_t running = 0;
 LOCAL char lastCmd;
 
 const char *msg_welcome = "Welcome to ESP8266 miniKame!\n\n";
@@ -100,7 +100,9 @@ static void ICACHE_FLASH_ATTR loop(os_event_t *events) {
 
 	if (running) {
 		os_delay_us(100);
-		system_os_post(user_procTaskPrio, 0, events->par);
+		if (running) {
+			system_os_post(user_procTaskPrio, 0, events->par);
+		}
 	}
 }
 
