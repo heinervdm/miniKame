@@ -16,7 +16,7 @@ union() {
 		}
 		translate([23,-23,-8]) rotate([0,0,-30]) hull() {
 			cylinder(h=2,d=7.5,center=true);
-			translate([19.5,0,0]) cylinder(h=2,d=4.5,center=true);
+			translate([14,0,0]) cylinder(h=2,d=4.5,center=true);
 		}
 	}
 }
