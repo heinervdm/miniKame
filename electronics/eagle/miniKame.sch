@@ -6353,6 +6353,239 @@ Source: AVX .. aphvc.pdf</description>
 </deviceset>
 </devicesets>
 </library>
+<library name="holes">
+<description>&lt;b&gt;Mounting Holes and Pads&lt;/b&gt;&lt;p&gt;
+&lt;author&gt;Created by librarian@cadsoft.de&lt;/author&gt;</description>
+<packages>
+<package name="2,8">
+<description>&lt;b&gt;MOUNTING HOLE&lt;/b&gt; 2.8 mm with drill center</description>
+<wire x1="-1.778" y1="0" x2="0" y2="-1.778" width="2.286" layer="51" curve="90" cap="flat"/>
+<wire x1="0" y1="1.778" x2="1.778" y2="0" width="2.286" layer="51" curve="-90" cap="flat"/>
+<circle x="0" y="0" radius="0.635" width="0.4572" layer="51"/>
+<circle x="0" y="0" radius="2.921" width="0.1524" layer="21"/>
+<circle x="0" y="0" radius="2.54" width="2.032" layer="40"/>
+<circle x="0" y="0" radius="2.54" width="2.032" layer="39"/>
+<circle x="0" y="0" radius="2.54" width="2.032" layer="41"/>
+<circle x="0" y="0" radius="2.54" width="2.032" layer="42"/>
+<circle x="0" y="0" radius="2.54" width="2.032" layer="43"/>
+<circle x="0" y="0" radius="1.5" width="0.2032" layer="21"/>
+<hole x="0" y="0" drill="2.8"/>
+</package>
+<package name="3,0">
+<description>&lt;b&gt;MOUNTING HOLE&lt;/b&gt; 3.0 mm with drill center</description>
+<wire x1="-2.159" y1="0" x2="0" y2="-2.159" width="2.4892" layer="51" curve="90" cap="flat"/>
+<wire x1="0" y1="2.159" x2="2.159" y2="0" width="2.4892" layer="51" curve="-90" cap="flat"/>
+<circle x="0" y="0" radius="3.429" width="0.1524" layer="21"/>
+<circle x="0" y="0" radius="0.762" width="0.4572" layer="51"/>
+<circle x="0" y="0" radius="3.048" width="2.032" layer="39"/>
+<circle x="0" y="0" radius="3.048" width="2.032" layer="43"/>
+<circle x="0" y="0" radius="3.048" width="2.032" layer="40"/>
+<circle x="0" y="0" radius="3.048" width="2.032" layer="41"/>
+<circle x="0" y="0" radius="3.048" width="2.032" layer="42"/>
+<circle x="0" y="0" radius="1.6" width="0.2032" layer="21"/>
+<text x="-1.27" y="-3.81" size="1.27" layer="48">3,0</text>
+<hole x="0" y="0" drill="3"/>
+</package>
+<package name="3,3">
+<description>&lt;b&gt;MOUNTING HOLE&lt;/b&gt; 3.3 mm with drill center</description>
+<wire x1="-2.159" y1="0" x2="0" y2="-2.159" width="2.4892" layer="51" curve="90" cap="flat"/>
+<wire x1="0" y1="2.159" x2="2.159" y2="0" width="2.4892" layer="51" curve="-90" cap="flat"/>
+<circle x="0" y="0" radius="3.429" width="0.1524" layer="21"/>
+<circle x="0" y="0" radius="0.762" width="0.4572" layer="51"/>
+<circle x="0" y="0" radius="3.048" width="2.54" layer="39"/>
+<circle x="0" y="0" radius="3.048" width="2.54" layer="40"/>
+<circle x="0" y="0" radius="3.048" width="2.032" layer="43"/>
+<circle x="0" y="0" radius="3.048" width="2.032" layer="41"/>
+<circle x="0" y="0" radius="3.048" width="2.032" layer="42"/>
+<circle x="0" y="0" radius="1.75" width="0.2032" layer="21"/>
+<hole x="0" y="0" drill="3.3"/>
+</package>
+<package name="3,6">
+<description>&lt;b&gt;MOUNTING HOLE&lt;/b&gt; 3.6 mm with drill center</description>
+<wire x1="-2.159" y1="0" x2="0" y2="-2.159" width="2.4892" layer="51" curve="90" cap="flat"/>
+<wire x1="0" y1="2.159" x2="2.159" y2="0" width="2.4892" layer="51" curve="-90" cap="flat"/>
+<circle x="0" y="0" radius="3.429" width="0.1524" layer="21"/>
+<circle x="0" y="0" radius="0.762" width="0.4572" layer="51"/>
+<circle x="0" y="0" radius="3.048" width="2.7686" layer="39"/>
+<circle x="0" y="0" radius="3.048" width="2.7686" layer="40"/>
+<circle x="0" y="0" radius="3.048" width="2.032" layer="43"/>
+<circle x="0" y="0" radius="3.048" width="2.032" layer="41"/>
+<circle x="0" y="0" radius="3.048" width="2.032" layer="42"/>
+<circle x="0" y="0" radius="1.9" width="0.2032" layer="21"/>
+<hole x="0" y="0" drill="3.6"/>
+</package>
+<package name="4,1">
+<description>&lt;b&gt;MOUNTING HOLE&lt;/b&gt; 4.1 mm with drill center</description>
+<wire x1="-2.54" y1="0" x2="0" y2="-2.54" width="3.9116" layer="51" curve="90" cap="flat"/>
+<wire x1="0" y1="2.54" x2="2.54" y2="0" width="3.9116" layer="51" curve="-90" cap="flat"/>
+<circle x="0" y="0" radius="4.4958" width="0.1524" layer="21"/>
+<circle x="0" y="0" radius="0.762" width="0.4572" layer="51"/>
+<circle x="0" y="0" radius="3.81" width="2.54" layer="39"/>
+<circle x="0" y="0" radius="3.81" width="2.54" layer="40"/>
+<circle x="0" y="0" radius="3.81" width="2.54" layer="41"/>
+<circle x="0" y="0" radius="3.81" width="2.54" layer="42"/>
+<circle x="0" y="0" radius="3.81" width="2.54" layer="43"/>
+<circle x="0" y="0" radius="2.15" width="0.1524" layer="21"/>
+<hole x="0" y="0" drill="4.1"/>
+</package>
+<package name="4,5">
+<description>&lt;b&gt;MOUNTING HOLE&lt;/b&gt; 4.5 mm with drill center</description>
+<wire x1="4.445" y1="0" x2="2.159" y2="0" width="0.0508" layer="21"/>
+<wire x1="0" y1="4.445" x2="0" y2="2.159" width="0.0508" layer="21"/>
+<wire x1="-2.159" y1="0" x2="-4.445" y2="0" width="0.0508" layer="21"/>
+<wire x1="0" y1="-2.159" x2="0" y2="-4.445" width="0.0508" layer="21"/>
+<wire x1="-2.54" y1="0" x2="0" y2="-2.54" width="3.9116" layer="51" curve="90" cap="flat"/>
+<wire x1="0" y1="2.54" x2="2.54" y2="0" width="3.9116" layer="51" curve="-90" cap="flat"/>
+<circle x="0" y="0" radius="4.4958" width="0.1524" layer="21"/>
+<circle x="0" y="0" radius="0.762" width="0.4572" layer="51"/>
+<circle x="0" y="0" radius="4.699" width="4.5466" layer="39"/>
+<circle x="0" y="0" radius="4.699" width="4.5466" layer="40"/>
+<circle x="0" y="0" radius="3.8184" width="2.54" layer="41"/>
+<circle x="0" y="0" radius="3.81" width="2.54" layer="42"/>
+<circle x="0" y="0" radius="3.81" width="2.54" layer="43"/>
+<circle x="0" y="0" radius="2.35" width="0.1524" layer="21"/>
+<text x="-1.27" y="-4.445" size="1.27" layer="48">4,5</text>
+<hole x="0" y="0" drill="4.5"/>
+</package>
+<package name="5,0">
+<description>&lt;b&gt;MOUNTING HOLE&lt;/b&gt; 5.0 mm with drill center</description>
+<wire x1="4.445" y1="0" x2="2.159" y2="0" width="0.0508" layer="21"/>
+<wire x1="0" y1="4.445" x2="0" y2="2.159" width="0.0508" layer="21"/>
+<wire x1="-2.159" y1="0" x2="-4.445" y2="0" width="0.0508" layer="21"/>
+<wire x1="0" y1="-2.159" x2="0" y2="-4.445" width="0.0508" layer="21"/>
+<wire x1="-2.54" y1="0" x2="0" y2="-2.54" width="3.9116" layer="51" curve="90" cap="flat"/>
+<wire x1="0" y1="2.54" x2="2.54" y2="0" width="3.9116" layer="51" curve="-90" cap="flat"/>
+<circle x="0" y="0" radius="4.4958" width="0.1524" layer="21"/>
+<circle x="0" y="0" radius="0.762" width="0.4572" layer="51"/>
+<circle x="0" y="0" radius="4.699" width="4.5466" layer="39"/>
+<circle x="0" y="0" radius="4.699" width="4.5466" layer="40"/>
+<circle x="0" y="0" radius="4.826" width="2.54" layer="43"/>
+<circle x="0" y="0" radius="4.826" width="2.54" layer="42"/>
+<circle x="0" y="0" radius="4.826" width="2.54" layer="41"/>
+<circle x="0" y="0" radius="2.6" width="0.1524" layer="21"/>
+<text x="-1.27" y="-4.445" size="1.27" layer="48">5,0</text>
+<hole x="0" y="0" drill="5"/>
+</package>
+<package name="3,2">
+<description>&lt;b&gt;MOUNTING HOLE&lt;/b&gt; 3.2 mm with drill center</description>
+<wire x1="-2.159" y1="0" x2="0" y2="-2.159" width="2.4892" layer="51" curve="90" cap="flat"/>
+<wire x1="0" y1="2.159" x2="2.159" y2="0" width="2.4892" layer="51" curve="-90" cap="flat"/>
+<circle x="0" y="0" radius="3.429" width="0.1524" layer="21"/>
+<circle x="0" y="0" radius="0.762" width="0.4572" layer="51"/>
+<circle x="0" y="0" radius="3.048" width="2.032" layer="39"/>
+<circle x="0" y="0" radius="3.048" width="2.032" layer="43"/>
+<circle x="0" y="0" radius="3.048" width="2.032" layer="40"/>
+<circle x="0" y="0" radius="3.048" width="2.032" layer="41"/>
+<circle x="0" y="0" radius="3.048" width="2.032" layer="42"/>
+<circle x="0" y="0" radius="1.7" width="0.2032" layer="21"/>
+<hole x="0" y="0" drill="3.2"/>
+</package>
+<package name="4,3">
+<description>&lt;b&gt;MOUNTING HOLE&lt;/b&gt; 4.3 mm with drill center</description>
+<wire x1="-2.54" y1="0" x2="0" y2="-2.54" width="3.9116" layer="51" curve="90" cap="flat"/>
+<wire x1="0" y1="2.54" x2="2.54" y2="0" width="3.9116" layer="51" curve="-90" cap="flat"/>
+<circle x="0" y="0" radius="4.4958" width="0.1524" layer="21"/>
+<circle x="0" y="0" radius="0.762" width="0.1524" layer="51"/>
+<circle x="0" y="0" radius="4.699" width="4.5466" layer="39"/>
+<circle x="0" y="0" radius="4.699" width="4.5466" layer="40"/>
+<circle x="0" y="0" radius="3.8184" width="2.54" layer="41"/>
+<circle x="0" y="0" radius="3.81" width="2.54" layer="42"/>
+<circle x="0" y="0" radius="3.81" width="2.54" layer="43"/>
+<circle x="0" y="0" radius="2.25" width="0.1524" layer="21"/>
+<hole x="0" y="0" drill="4.3"/>
+</package>
+<package name="5,5">
+<description>&lt;b&gt;MOUNTING HOLE&lt;/b&gt; 5.5 mm with drill center</description>
+<wire x1="4.445" y1="0" x2="2.159" y2="0" width="0.0508" layer="21"/>
+<wire x1="0" y1="4.445" x2="0" y2="2.159" width="0.0508" layer="21"/>
+<wire x1="-2.159" y1="0" x2="-4.445" y2="0" width="0.0508" layer="21"/>
+<wire x1="0" y1="-2.159" x2="0" y2="-4.445" width="0.0508" layer="21"/>
+<wire x1="-2.54" y1="0" x2="0" y2="-2.54" width="3.9116" layer="51" curve="90" cap="flat"/>
+<wire x1="0" y1="2.54" x2="2.54" y2="0" width="3.9116" layer="51" curve="-90" cap="flat"/>
+<circle x="0" y="0" radius="4.4958" width="0.1524" layer="21"/>
+<circle x="0" y="0" radius="0.762" width="0.4572" layer="51"/>
+<circle x="0" y="0" radius="4.699" width="4.5466" layer="39"/>
+<circle x="0" y="0" radius="4.699" width="4.5466" layer="40"/>
+<circle x="0" y="0" radius="4.826" width="2.54" layer="43"/>
+<circle x="0" y="0" radius="4.826" width="2.54" layer="42"/>
+<circle x="0" y="0" radius="4.826" width="2.54" layer="41"/>
+<circle x="0" y="0" radius="2.85" width="0.1524" layer="21"/>
+<hole x="0" y="0" drill="5.5"/>
+</package>
+</packages>
+<symbols>
+<symbol name="MOUNT-HOLE">
+<wire x1="0" y1="1.27" x2="1.27" y2="0" width="1.524" layer="94" curve="-90" cap="flat"/>
+<wire x1="-1.27" y1="0" x2="0" y2="-1.27" width="1.524" layer="94" curve="90" cap="flat"/>
+<wire x1="-0.508" y1="0" x2="0.508" y2="0" width="0.0508" layer="94"/>
+<wire x1="0" y1="0.508" x2="0" y2="-0.508" width="0.0508" layer="94"/>
+<circle x="0" y="0" radius="2.032" width="0.0508" layer="94"/>
+<circle x="0" y="0" radius="0.508" width="0.0508" layer="94"/>
+<text x="2.032" y="0.5842" size="1.778" layer="95">&gt;NAME</text>
+<text x="2.032" y="-2.4638" size="1.778" layer="96">&gt;VALUE</text>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="MOUNT-HOLE" prefix="H">
+<description>&lt;b&gt;MOUNTING HOLE&lt;/b&gt; with drill center marker</description>
+<gates>
+<gate name="G$1" symbol="MOUNT-HOLE" x="0" y="0"/>
+</gates>
+<devices>
+<device name="2.8" package="2,8">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="3.0" package="3,0">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="3.3" package="3,3">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="3.6" package="3,6">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="4.1" package="4,1">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="4.5" package="4,5">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="5.0" package="5,0">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="3.2" package="3,2">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="4.3" package="4,3">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="5.5" package="5,5">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -6363,7 +6596,7 @@ Source: AVX .. aphvc.pdf</description>
 </class>
 </classes>
 <parts>
-<part name="U$1" library="esp8266modules" deviceset="ESP12" device=""/>
+<part name="U1" library="esp8266modules" deviceset="ESP12" device=""/>
 <part name="SV1" library="con-lstb" deviceset="MA03-1" device=""/>
 <part name="SV2" library="con-lstb" deviceset="MA03-1" device=""/>
 <part name="SV3" library="con-lstb" deviceset="MA03-1" device=""/>
@@ -6403,17 +6636,21 @@ Source: AVX .. aphvc.pdf</description>
 <part name="R1" library="resistor" deviceset="R-EU_" device="M0805" value="10k"/>
 <part name="GND13" library="supply1" deviceset="GND" device=""/>
 <part name="R2" library="resistor" deviceset="R-EU_" device="M0805" value="100k"/>
-<part name="C1" library="resistor" deviceset="C-EU" device="C0805"/>
-<part name="C2" library="resistor" deviceset="C-EU" device="C0805"/>
+<part name="C1" library="resistor" deviceset="C-EU" device="C0805" value="100n"/>
+<part name="C2" library="resistor" deviceset="C-EU" device="C0805" value="100u"/>
 <part name="GND14" library="supply1" deviceset="GND" device=""/>
 <part name="+3V13" library="supply1" deviceset="+3V3" device=""/>
+<part name="H1" library="holes" deviceset="MOUNT-HOLE" device="3.3"/>
+<part name="H2" library="holes" deviceset="MOUNT-HOLE" device="3.3"/>
+<part name="H3" library="holes" deviceset="MOUNT-HOLE" device="3.3"/>
+<part name="H4" library="holes" deviceset="MOUNT-HOLE" device="3.3"/>
 </parts>
 <sheets>
 <sheet>
 <plain>
 </plain>
 <instances>
-<instance part="U$1" gate="G$1" x="73.66" y="43.18"/>
+<instance part="U1" gate="G$1" x="73.66" y="43.18"/>
 <instance part="SV1" gate="G$1" x="25.4" y="60.96"/>
 <instance part="SV2" gate="G$1" x="25.4" y="45.72"/>
 <instance part="SV3" gate="G$1" x="25.4" y="30.48"/>
@@ -6457,6 +6694,10 @@ Source: AVX .. aphvc.pdf</description>
 <instance part="C2" gate="G$1" x="68.58" y="55.88" rot="R90"/>
 <instance part="GND14" gate="1" x="63.5" y="60.96" rot="R270"/>
 <instance part="+3V13" gate="G$1" x="76.2" y="60.96" rot="R270"/>
+<instance part="H1" gate="G$1" x="142.24" y="101.6"/>
+<instance part="H2" gate="G$1" x="142.24" y="96.52"/>
+<instance part="H3" gate="G$1" x="142.24" y="91.44"/>
+<instance part="H4" gate="G$1" x="142.24" y="86.36"/>
 </instances>
 <busses>
 </busses>
@@ -6503,7 +6744,7 @@ Source: AVX .. aphvc.pdf</description>
 <wire x1="35.56" y1="60.96" x2="33.02" y2="60.96" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="U$1" gate="G$1" pin="VCC"/>
+<pinref part="U1" gate="G$1" pin="VCC"/>
 <pinref part="+3V9" gate="G$1" pin="+3V3"/>
 </segment>
 <segment>
@@ -6511,7 +6752,7 @@ Source: AVX .. aphvc.pdf</description>
 <pinref part="+3V10" gate="G$1" pin="+3V3"/>
 </segment>
 <segment>
-<pinref part="U$1" gate="G$1" pin="CH_PD"/>
+<pinref part="U1" gate="G$1" pin="CH_PD"/>
 <pinref part="+3V12" gate="G$1" pin="+3V3"/>
 <wire x1="43.18" y1="45.72" x2="55.88" y2="45.72" width="0.1524" layer="91"/>
 <pinref part="R1" gate="G$1" pin="1"/>
@@ -6560,7 +6801,7 @@ Source: AVX .. aphvc.pdf</description>
 <pinref part="GND8" gate="1" pin="GND"/>
 </segment>
 <segment>
-<pinref part="U$1" gate="G$1" pin="GND"/>
+<pinref part="U1" gate="G$1" pin="GND"/>
 <pinref part="GND9" gate="1" pin="GND"/>
 <pinref part="R2" gate="G$1" pin="2"/>
 <wire x1="96.52" y1="25.4" x2="88.9" y2="25.4" width="0.1524" layer="91"/>
@@ -6596,7 +6837,7 @@ Source: AVX .. aphvc.pdf</description>
 <pinref part="SV9" gate="G$1" pin="4"/>
 <wire x1="157.48" y1="33.02" x2="116.84" y2="33.02" width="0.1524" layer="91"/>
 <wire x1="116.84" y1="33.02" x2="116.84" y2="50.8" width="0.1524" layer="91"/>
-<pinref part="U$1" gate="G$1" pin="TX"/>
+<pinref part="U1" gate="G$1" pin="TX"/>
 <wire x1="116.84" y1="50.8" x2="88.9" y2="50.8" width="0.1524" layer="91"/>
 </segment>
 </net>
@@ -6605,7 +6846,7 @@ Source: AVX .. aphvc.pdf</description>
 <wire x1="119.38" y1="48.26" x2="119.38" y2="35.56" width="0.1524" layer="91"/>
 <pinref part="SV9" gate="G$1" pin="3"/>
 <wire x1="119.38" y1="35.56" x2="157.48" y2="35.56" width="0.1524" layer="91"/>
-<pinref part="U$1" gate="G$1" pin="RX"/>
+<pinref part="U1" gate="G$1" pin="RX"/>
 <wire x1="88.9" y1="48.26" x2="119.38" y2="48.26" width="0.1524" layer="91"/>
 </segment>
 </net>
@@ -6616,7 +6857,7 @@ Source: AVX .. aphvc.pdf</description>
 <label x="12.7" y="63.5" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="U$1" gate="G$1" pin="GPIO4"/>
+<pinref part="U1" gate="G$1" pin="GPIO4"/>
 <wire x1="88.9" y1="45.72" x2="93.98" y2="45.72" width="0.1524" layer="91"/>
 <label x="88.9" y="45.72" size="1.778" layer="95"/>
 </segment>
@@ -6628,7 +6869,7 @@ Source: AVX .. aphvc.pdf</description>
 <label x="12.7" y="48.26" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="U$1" gate="G$1" pin="GPIO13"/>
+<pinref part="U1" gate="G$1" pin="GPIO13"/>
 <wire x1="55.88" y1="35.56" x2="50.8" y2="35.56" width="0.1524" layer="91"/>
 <label x="50.8" y="35.56" size="1.778" layer="95"/>
 </segment>
@@ -6640,7 +6881,7 @@ Source: AVX .. aphvc.pdf</description>
 <label x="12.7" y="33.02" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="U$1" gate="G$1" pin="GPIO12"/>
+<pinref part="U1" gate="G$1" pin="GPIO12"/>
 <wire x1="55.88" y1="38.1" x2="50.8" y2="38.1" width="0.1524" layer="91"/>
 <label x="50.8" y="38.1" size="1.778" layer="95"/>
 </segment>
@@ -6652,7 +6893,7 @@ Source: AVX .. aphvc.pdf</description>
 <label x="12.7" y="17.78" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="U$1" gate="G$1" pin="GPIO14"/>
+<pinref part="U1" gate="G$1" pin="GPIO14"/>
 <wire x1="55.88" y1="40.64" x2="50.8" y2="40.64" width="0.1524" layer="91"/>
 <label x="50.8" y="40.64" size="1.778" layer="95"/>
 </segment>
@@ -6664,7 +6905,7 @@ Source: AVX .. aphvc.pdf</description>
 <label x="33.02" y="17.78" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="U$1" gate="G$1" pin="GPIO5"/>
+<pinref part="U1" gate="G$1" pin="GPIO5"/>
 <wire x1="88.9" y1="43.18" x2="93.98" y2="43.18" width="0.1524" layer="91"/>
 <label x="88.9" y="43.18" size="1.778" layer="95"/>
 </segment>
@@ -6676,12 +6917,12 @@ Source: AVX .. aphvc.pdf</description>
 <label x="33.02" y="33.02" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="U$1" gate="G$1" pin="GPIO0"/>
+<pinref part="U1" gate="G$1" pin="GPIO0"/>
 <wire x1="88.9" y1="40.64" x2="99.06" y2="40.64" width="0.1524" layer="91"/>
 <label x="88.9" y="40.64" size="1.778" layer="95"/>
-<wire x1="99.06" y1="40.64" x2="99.06" y2="63.5" width="0.1524" layer="91"/>
-<pinref part="FLASH" gate="1" pin="S1"/>
-<wire x1="99.06" y1="63.5" x2="96.52" y2="63.5" width="0.1524" layer="91"/>
+<pinref part="FLASH" gate="1" pin="S"/>
+<wire x1="96.52" y1="66.04" x2="99.06" y2="66.04" width="0.1524" layer="91"/>
+<wire x1="99.06" y1="66.04" x2="99.06" y2="40.64" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="S2" class="0">
@@ -6691,7 +6932,7 @@ Source: AVX .. aphvc.pdf</description>
 <label x="33.02" y="48.26" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="U$1" gate="G$1" pin="GPIO2"/>
+<pinref part="U1" gate="G$1" pin="GPIO2"/>
 <wire x1="88.9" y1="38.1" x2="93.98" y2="38.1" width="0.1524" layer="91"/>
 <label x="88.9" y="38.1" size="1.778" layer="95"/>
 </segment>
@@ -6703,7 +6944,7 @@ Source: AVX .. aphvc.pdf</description>
 <label x="33.02" y="63.5" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="U$1" gate="G$1" pin="GPIO15"/>
+<pinref part="U1" gate="G$1" pin="GPIO15"/>
 <wire x1="88.9" y1="35.56" x2="96.52" y2="35.56" width="0.1524" layer="91"/>
 <label x="88.9" y="35.56" size="1.778" layer="95"/>
 <pinref part="R2" gate="G$1" pin="1"/>
@@ -6711,21 +6952,18 @@ Source: AVX .. aphvc.pdf</description>
 </net>
 <net name="N$4" class="0">
 <segment>
-<pinref part="RESET" gate="1" pin="S1"/>
-<pinref part="U$1" gate="G$1" pin="RESET"/>
-<wire x1="53.34" y1="63.5" x2="53.34" y2="50.8" width="0.1524" layer="91"/>
+<pinref part="U1" gate="G$1" pin="RESET"/>
 <pinref part="R1" gate="G$1" pin="2"/>
 <junction x="53.34" y="50.8"/>
-<pinref part="U$1" gate="G$1" pin="GPIO16"/>
+<pinref part="U1" gate="G$1" pin="GPIO16"/>
 <wire x1="55.88" y1="43.18" x2="53.34" y2="43.18" width="0.1524" layer="91"/>
 <wire x1="53.34" y1="43.18" x2="53.34" y2="50.8" width="0.1524" layer="91"/>
 <wire x1="53.34" y1="50.8" x2="55.88" y2="50.8" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$3" class="0">
-<segment>
-<pinref part="SV9" gate="G$1" pin="2"/>
-<wire x1="154.94" y1="38.1" x2="157.48" y2="38.1" width="0.1524" layer="91"/>
+<wire x1="53.34" y1="50.8" x2="53.34" y2="60.96" width="0.1524" layer="91"/>
+<wire x1="53.34" y1="60.96" x2="55.88" y2="60.96" width="0.1524" layer="91"/>
+<wire x1="55.88" y1="60.96" x2="55.88" y2="66.04" width="0.1524" layer="91"/>
+<pinref part="RESET" gate="1" pin="S"/>
+<wire x1="55.88" y1="66.04" x2="53.34" y2="66.04" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
